@@ -28,7 +28,7 @@ body
 {
 	
 	font-size:18px;
-	background-image:url(cocina.jpg);
+	background-image: url(cocina-3.jpg);
 	width: 100%
 
 
@@ -64,16 +64,38 @@ div
 	
 	font-family:familia2;
 	text-transform:none;
-	font:"fuenteNueva" bold;
+
 	color:#EBEBEB;
 }
-.lateral
+
+aside
 {
 	float:left;
 	height:500px;
 	width:100px;
+	border: 2px solid #C25301;
+	border-radius: 5px;
+	background: rgba(46, 46, 46, 0.5);
+	
 }
+aside li{
+	display: block;
+	position: relative;
+	color: rgb(240, 102, 3);
+	right: 90%;
+	width: 90px;
+	margin: 38px 0 75px 0;
+	border-bottom: 2px solid rgb(0, 0, 0);
+	font-family: familia2;
+	
 
+}
+aside li:hover{
+	animation-name: box-2;
+	animation-duration: 250ms;
+	animation-fill-mode: forwards;
+
+}
 .navegacion
 {
 	width:1350px;
@@ -110,7 +132,7 @@ li:nth-child(7)
 
 .navegacion li:hover{
 
-	animation-name: boxs;
+	animation-name: box;
 	animation-duration: 250ms;
 	animation-fill-mode: forwards;
 	
@@ -118,7 +140,9 @@ li:nth-child(7)
 
 }
 
-@keyframes boxs
+
+
+@keyframes box
 {
 	to
 	{
@@ -129,6 +153,13 @@ li:nth-child(7)
 	
 }
 
+@keyframes box-2{
+	to{
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+	}
+}
+
 ul:first-child
 {
 	margin-left: 25px;
@@ -137,12 +168,9 @@ ul:first-child
 
 
 
-.video
-{
-	text-align:center;
-	margin-left:110px;
-	border:none;
-	
+section
+{	
+	text-align: center
 }
 .videotext
 {
