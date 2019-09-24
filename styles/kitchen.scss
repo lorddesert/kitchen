@@ -1,0 +1,360 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* reset CSS*/
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+ol { padding-left: 1.4em; list-style: decimal; }
+ul { padding-left: 1.4em; list-style:square; }
+q:before, q:after { content:''; }
+/* end reset CSS*/
+
+/* Sass variables*/
+/* fonts */
+$font-family-p: Lato;
+$font-family-h: Roboto;
+
+/* colors */
+$font-color: #EBEBEB;
+$dark-blue-color: #001a23;
+
+$main-color1: #f77f00;
+$main-color2: #fcbf49;
+$main-color3: #d62828;
+
+/* for highlight */
+$hl-color1: #003049;
+$hl-color2: #0267c1;
+
+/* balance colors*/
+$bl-color1: #eae2b7;
+$bl-color2: #666;
+
+
+body
+{
+
+	font-size:18px;
+    width: 100%;
+    a {
+        text-decoration: none;
+    }
+}
+.titulo
+{
+	text-align:center;
+	color:$main-color2;
+	text-shadow:$hl-color1 1.5px 1.5px;
+    width:100%;
+	background:-moz-linear-gradient(top, $main-color1 ,$main-color2);
+
+	h1
+    {
+        font-size:3em;
+        font-family:$font-family-h;
+
+        :hover {
+            animation-name: titleText-shadow;
+            animation-duration: 200ms;
+            animation-fill-mode: forwards;
+        }
+        a {
+            color: $main-color2;
+        }
+    }
+
+    h2
+    {
+        font-family:$font-family-h;
+        color:$main-color3;
+        text-shadow:none;
+        padding-bottom: 1.3em;
+    }
+
+}
+
+
+div
+{
+
+	text-transform:none;
+	color:$font-color;
+}
+
+aside
+{
+	float:left;
+	height:500px;
+	width:100px;
+	border: 2px solid #C25301;
+	border-radius: 5px;
+	background: rgba(46, 46, 46, 0.5);
+
+    li{
+        display: block;
+        position: relative;
+        color: rgb(240, 102, 3);
+        right: 90%;
+        width: 90px;
+        margin: 38px 0 75px 0;
+        border-bottom: 2px solid rgb(0, 0, 0);
+        font-family: familia2;
+
+        :hover{
+            animation-name: box-2;
+            animation-duration: 250ms;
+            animation-fill-mode: forwards;
+
+        }
+    }
+}
+
+.navegacion
+{
+	width:1350px;
+	height: 25px;
+    background: rgba(0,0,0,0.5);
+
+}
+
+
+ul:first-child
+{
+	margin-left: 25px;
+}
+
+
+
+
+section
+{
+    font-family: $font-family-p, Arial, Helvetica, sans-serif;
+    background: #C25301;
+    text-align: center;
+    line-height: 5em;
+    height: 300px;
+    p {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+}
+// .slice-container
+.slice-container {
+    display: flex;
+    flex-direction: row;
+
+    .p-container {
+        flex: 3;
+        padding: 15px;
+        display: flex;
+
+        p {
+            margin: auto;
+            font-family: $font-family-p, Arial, Helvetica, sans-serif;
+        }
+    }
+
+    .h-container {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+
+        h2 {
+            font-family: $font-family-h, Arial, Helvetica, sans-serif;
+            color: $font-color;
+        }
+    }
+
+    .main-features {
+        color: $dark-blue-color;
+        font-size: 2.5em;
+        font-family: $font-family-p, sans-serif;
+        margin: auto;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: $font-color;
+    }
+}
+
+#first-container,#second-container {
+
+    p {
+        line-height: 3em;
+    }
+}
+
+#intro-slice {
+
+
+    background: url(chef.jpg);
+    display: flex;
+    justify-items: flex-start;
+
+    #introP-container {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: rgb(0, 0, 0) 5px;
+        line-height: normal;
+        padding: 25px;
+        width: 55%;
+        text-align: start;
+    }
+
+    p {
+
+        font-size: 1.6em;
+
+    }
+}
+
+#first-container
+{
+    background: $hl-color1;
+
+}
+#second-container
+{
+    background-color: $main-color3;
+    flex-direction: row-reverse;
+}
+#third-container
+{
+    background-color: $main-color1;
+}
+
+#four-container {
+        flex-direction: column;
+        align-items: center;
+        background-color: $bl-color1;
+
+        a {
+            color: $main-color3;
+            text-decoration: underline;
+            text-shadow: 0 0 2px $main-color3;
+        }
+
+        p {
+            color: $main-color3;
+
+            :hover {
+                text-shadow: 2px 4px 7px $main-color3;
+            }
+        }
+
+        .pBox-container{
+
+            a:hover {
+                animation: 200ms sliceText-shadow forwards;
+            }
+        }
+}
+
+figure {
+
+    padding-top: 2em;
+}
+
+#figcap-container
+{
+    padding-top: 2em;
+    width: 56%;
+    display: flex;
+    margin: auto;
+
+    figcaption {
+        font-family: $font-family-p;
+        font-size: 1.4em;
+        background-color: #C25301;
+        border-radius: 20px;
+        color: #001a23;
+        width: 100%;
+        text-align: center;
+        line-height: 2em;
+    }
+
+}
+#video-container iframe {
+    display: flex;
+    margin: auto;
+}
+.videotext
+{
+	text-align:center;
+	font-size:17px;
+	margin-left:110px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	background:rgba(0,0,0,0.5);
+	border:none;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    background-color: $hl-color1;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+
+    div {
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    address {
+        color: $font-color;
+    }
+    .social-links {
+        // PONER EFECTO DE RELLENO EN COLOR NEGRO
+        display: flex;
+        gap: 10px 10px;
+        flex-direction: row;
+
+        .sl-container:hover {
+            animation-name: whiteFilling;
+            animation-duration: 200ms;
+            animation-fill-mode: forwards;
+        }
+
+        div {
+            padding: 0;
+            height: 60px;
+            width: 60px;
+            border: solid 1px #FFF;
+            border-radius: 15px;
+            display: flex;
+
+            a {
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+
+@keyframes whiteFilling {
+    100% {
+        background-color: #FFF;
+    }
+}
+@keyframes titleText-shadow {
+    100% {
+        text-shadow: 2px 2px 4px black;
+    }
+}
+
+@keyframes sliceText-shadow {
+    100% {
+        text-shadow: 2px 2px 5px $main-color3;
+    }
+}
