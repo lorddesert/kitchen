@@ -1,52 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
-		<link rel="stylesheet" href="kitchen.css" type="text/css"  />
+		<meta charset="utf-8" />
+		<meta content="Un lugar donde todos podemos aprender a cocinar." />
+		<link rel="stylesheet" href="styles/kitchen.css" type="text/css"  />
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link  rel="icon"   href="favicon.ico" type="image/png" />
 		<title>Kitchen</title>
-
 	</head>
 	<body>
-		<header class="titulo">	
+		<header class="titulo">
 				<hgroup>
-					<h1><strong>Kitchen</strong></h1>
-					<h2>Cocina para todo el mundo</h2>
-					
+					<h1><strong><a href="#">Kitchen</a></strong></h1>
+					<h2><strong>Cocina para todo el mundo</strong></h2>
 				</hgroup>
 		</header>
-		
-        <div class="navegacion">
+        <!-- <div class="navegacion">
 			<ul>
             	<a href="#"><li>Recetas</li></a>
                 <li class="box1"><a>Delivery</a></li>
                 <li class="box2"><a>Foro</a></li>
                 <li class="box3"><a>Ubicacion</a></li>
-                <li class="box4"><a>Novedades</a></li> 
+                <li class="box4"><a>Novedades</a></li>
                 <li class="box5"><a>Tienda</a></li>
                 <li class="box6"><a>Acerca de</a></li>
-                
             </ul>
-		</div>
-        
-        <aside>
-        	<ul>
-				<li>Receta 1</li>
-				<li>Receta 1</li>
-				<li>Receta 1</li>
-				<li>Receta 1</li>
-				<li>Receta 1</li>
-			</ul>
-		</aside>
-		<section>
-			<figure>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/6fhAchG-jcw" 
-				frameborder="0" 
-				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-				allowfullscreen>
-				</iframe>
-			</figure>
+		</div> -->
+
+		<!-- <figure id="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/6fhAchG-jcw"
+			frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen>
+			</iframe>
+		</figure> -->
+		<!-- <div id="figcap-container">
 			<figcaption>
-				asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd
+				Kitchen es un lugar en donde todo el mundo puede aprender a cocinar y a desarrollar desde las mas simples,
+				hasta las mas complejas recetas de cocina.
+				Te vamos a guiar a travez de los pasos que vas a realizar para poder entender,realizar y resolver todas
+				aquellas tareas a la hora de cocinar. ¿Estas listo?, <a href="#">¡Vamos a cocinar!</a>
 			</figcaption>
-		</section>
+		</div> -->
+
+		<main>
+			<!-- Slice presentacion -->
+			<section class="slice-container" id="intro-slice">
+				<div id="introP-container">
+					<p>
+						Kitchen es un lugar en donde todo el mundo puede aprender a cocinar y a desarrollar desde las mas simples,
+						hasta las mas complejas recetas de cocina.
+						Te vamos a guiar a travez de los pasos que vas a realizar para poder entender,realizar y resolver todas
+						aquellas tareas a la hora de cocinar.
+					</p>
+				</div>
+			</section>
+
+			<!-- Slice analitico -->
+			<!-- <section class="slice-container">
+				<div class="p-container">
+					<p>
+						
+					</p>
+				</div>
+			</section> -->
+
+			<!-- 1er Slice -->
+			<section id="first-container" class="slice-container">
+				<div class="h-container" >
+					<h2><strong>Diversidad <br />cultural</strong></h2>
+					<div class="main-features"><span>1</span></div>
+				</div>
+				<div class="p-container">
+					<p>Con cientos de recetas de multiples culturas,Kitchen conecta a las diferentes personas alrededor del mundo,<br />
+					¡A travez de su cocina!
+					</p>
+				</div>
+			</section>
+
+			<!-- 2do Slice -->
+			<section id="second-container" class="slice-container">
+				<div class="h-container">
+					<h2><strong>Seguimiento <br />paso a paso</strong></h2>
+					<div class="main-features"><span>2</span></div>
+				</div>
+				<div class="p-container">
+					<p>
+						En Kitchen,nos ocupamos de darte la mejor experincia posible a la hora de cocinar,y seguir la receta tanto
+				   		escrita, como con un video explicativo detallando aun mas el paso a paso de tu receta favorita.
+					</p>
+				</div>
+			</section>
+
+			<!-- 3er Slice -->
+			<section id="third-container" class="slice-container">
+				<div class="h-container">
+					<h2><strong>¡Kitchen lo hacemos juntos!</strong></h2>
+					<div class="main-features"><span>3</span></div>
+				</div>
+				<div class="p-container">
+					<p>
+						La comunidad es libre de <a href="#">agregar recetas</a> y darse a conocer
+						como chefs en nuestra plataforma.
+					</p>
+				</div>
+			</section>
+
+			<!-- Slice de vinculos -->
+			<section id="four-container" class="slice-container">
+				<div class="p-container">
+					<p>¿Estas listo?,</p>
+				</div>
+				<div class="p-container pBox-container">
+						<p><a href="#">¡Vamos a cocinar!</a></p>
+				</div>
+				</section>
+		</main>
+		<footer>
+			<div>
+				<address>Kitchen,inc. Todos los derechos reservados.</address>
+			</div>
+			<div class="social-links">
+				<!-- poner efecto de relleno negro -->
+				<div class="sl-container"><a href="#"><img src="images/facebook.png" alt="facebook"></a></div>
+				<div class="sl-container"><a href="#"><img src="images/twitter.png" alt="twitter"></a></div>
+				<div class="sl-container"><a href="#"><img src="images/instagram.png" alt="instagram"></a></div>
+			</div>
+			<div>
+				<span>revisar que links poner por aca</span>
+			</div>
+			<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/"     title="Flaticon">www.flaticon.com</a></div>
+		</footer>
 	</body>
 </html>
