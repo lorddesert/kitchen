@@ -40,52 +40,75 @@ $bl-color2: #666;
 
 body
 {
-
 	font-size:18px;
     width: 100%;
     a {
         text-decoration: none;
+        color: inherit;
     }
 }
 .titulo
 {
+    display: flex;
+    justify-content: space-evenly;
 	text-align:center;
 	color:$main-color2;
-	text-shadow:$hl-color1 1.5px 1.5px;
+	text-shadow: 2px 2px 4px black;
     width:100%;
-	background:-moz-linear-gradient(top, $main-color1 ,$main-color2);
+    border-bottom: 0.5px solid #001a23;
+	background:-moz-linear-gradient(top, $main-color2 ,$main-color1);
+
+    nav {
+        display: flex;
+        align-items: flex-end;
+        // flex:2;
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+            gap: 25px;
+            font-family: Lato,Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+            color: $font-color;
+
+            div {
+                border-radius: 7px;
+                padding: 5px;
+            }
+
+            div:hover {
+                color: #d1cdcd;
+            }
+        }
+    }
+
+   hgroup {
+    //    flex: 3;
+       margin-left: 35px;
+       font-family:$font-family-h;
+   }
 
 	h1
     {
-        font-size:3em;
-        font-family:$font-family-h;
-
-        :hover {
-            animation-name: titleText-shadow;
-            animation-duration: 200ms;
-            animation-fill-mode: forwards;
-        }
+        font-size:2.5em;
+        transition:0.2s all ease-out;
         a {
             color: $main-color2;
         }
     }
 
-    h2
-    {
-        font-family:$font-family-h;
-        color:$main-color3;
-        text-shadow:none;
-        padding-bottom: 1.3em;
+    h1:hover {
+        text-shadow: 0 0 4px $hl-color2;
     }
 
-}
 
+    h2
+    {
+        color:$main-color3;
+        text-shadow:none;
+    }
 
-div
-{
-
-	text-transform:none;
-	color:$font-color;
 }
 
 aside
@@ -130,7 +153,9 @@ ul:first-child
 	margin-left: 25px;
 }
 
-
+.resaltar {
+    color: $hl-color1;
+}
 
 
 section
@@ -160,6 +185,7 @@ section
         display: flex;
 
         p {
+            color: $font-color;
             margin: auto;
             font-family: $font-family-p, Arial, Helvetica, sans-serif;
         }
@@ -198,17 +224,25 @@ section
 #intro-slice {
 
 
-    background: url(chef.jpg);
+    background: url(..\images\chef.jpg);
     display: flex;
     justify-items: flex-start;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
 
     #introP-container {
-        background-color: rgba(0, 0, 0, 0.5);
+        color: $font-color;
+        background: -moz-linear-gradient($main-color1,#014163);
         box-shadow: rgb(0, 0, 0) 5px;
         line-height: normal;
         padding: 25px;
-        width: 55%;
+        flex: 1;
         text-align: start;
+    }
+
+    .intro-image {
+        background: url(chef.jpg);
+        flex: 1;
     }
 
     p {
@@ -220,17 +254,32 @@ section
 
 #first-container
 {
-    background: $hl-color1;
+    background: url(diversidad.png);
+
+    .h-container,.p-container {
+        background-color: rgba(0, 48, 73, 0.8);
+    }
 
 }
 #second-container
 {
-    background-color: $main-color3;
+    background: url(slice-2-1.png) no-repeat;
     flex-direction: row-reverse;
+    .p-container {
+
+    }
+
+    .h-container,.p-container {
+        background-color: rgba(214, 40, 40,0.8);
+    }
 }
 #third-container
 {
-    background-color: $main-color1;
+
+    background: url(union.jpg) center no-repeat $main-color1;
+    .h-container,.p-container {
+        background:rgba(247, 127, 0,0.8);
+    }
 }
 
 #four-container {
@@ -241,24 +290,25 @@ section
         a {
             color: $main-color3;
             text-decoration: underline;
-            text-shadow: 0 0 2px $main-color3;
         }
 
         p {
             color: $main-color3;
-
-            :hover {
-                text-shadow: 2px 4px 7px $main-color3;
-            }
-        }
+         }
 
         .pBox-container{
 
-            a:hover {
-                animation: 200ms sliceText-shadow forwards;
+            a {
+                transition: 0.2s all ease-out;
             }
         }
+
+        .pBox-container:hover {
+            text-shadow: 0 0 5px $main-color3;
+        }
 }
+
+
 
 figure {
 
@@ -307,23 +357,50 @@ footer {
     font-family: Lato, Arial, Helvetica, sans-serif;
 
     div {
+        color: $font-color;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.5);
     }
+
     address {
         color: $font-color;
     }
+
     .social-links {
-        // PONER EFECTO DE RELLENO EN COLOR NEGRO
+
         display: flex;
         gap: 10px 10px;
         flex-direction: row;
+        transition: all 0.2s ease-out;
 
-        .sl-container:hover {
-            animation-name: whiteFilling;
-            animation-duration: 200ms;
-            animation-fill-mode: forwards;
+        .sl-container {
+            transition: all 0.2s ease-out;
+            opacity: 0;
         }
+
+        .sl-container:nth-child(1) {
+            transform: translateX(175%);
+        }
+        .sl-container:nth-child(2) {
+            transform: translateX(58%);
+        }
+        .sl-container:nth-child(3) {
+            transform: translateX(-58%);
+            opacity: 1;
+            display: flex;
+
+            span {
+                flex: 1;
+                margin: auto;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+        .sl-container:nth-child(4) {
+            transform: translateX(-175%);
+        }
+
+
 
         div {
             padding: 0;
@@ -340,6 +417,95 @@ footer {
     }
 }
 
+.social-links:hover {
+    .sl-container {
+        opacity: 1;
+    }
+
+    .sl-container:hover {
+        background: #FFF;
+    }
+
+    .sl-container:nth-child(1) {
+        transform: translateX(80%);
+    }
+    .sl-container:nth-child(2) {
+        transform: translateX(65%);
+    }
+    .sl-container:nth-child(3) {
+        transform: translate(-58%, 50%);
+        opacity: 0;
+        display: flex;
+
+        span {
+            flex: 1;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    .sl-container:nth-child(4) {
+        transform: translateX(-67%);
+    }
+}
+
+.pageLinks-container {
+    display: flex;
+    flex-direction: row;
+
+    .links-box {
+        opacity: 1 !important;
+        transform: translate(-75%);
+    }
+    .page-link {
+        opacity: 0;
+        transition: 0.2s ease-out all;
+    }
+
+    .page-link:nth-child(1) {
+        transform: translate(50%);
+
+    }
+    .page-link:nth-child(2) {
+        transform: translate(50%);
+
+    }
+
+    .page-link:nth-child(4) {
+        transform: translate(-50%);
+
+    }
+}
+
+.pageLinks-container:hover {
+    .page-link {
+        opacity: 1;
+    }
+    .page-link:hover {
+        color: gray;
+    }
+    .page-link:nth-child(1) {
+        transform: translate(0);
+    }
+    .page-link:nth-child(2) {
+        transform: translate(28%);
+    }
+    .page-link:nth-child(3) {
+        opacity: 0 !important;
+        transform: translate(-75%,50%);
+
+    }
+    .page-link:nth-child(4) {
+        transform: translate(-25%);
+
+    }
+
+
+}
+
+
+
+
 
 
 @keyframes whiteFilling {
@@ -349,12 +515,12 @@ footer {
 }
 @keyframes titleText-shadow {
     100% {
-        text-shadow: 2px 2px 4px black;
+        text-shadow: 0 0 4px $hl-color1;
     }
 }
 
 @keyframes sliceText-shadow {
     100% {
-        text-shadow: 2px 2px 5px $main-color3;
+        text-shadow: 0 0 5px $main-color3;
     }
 }
