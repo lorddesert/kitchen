@@ -1,4 +1,3 @@
 # kitchen
-My web personal proyect.
 
-A kitchen recipes community.
+A kitchen recipes community, you can access here - https://lorddesert.github.io/kitchen
